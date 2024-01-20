@@ -1,10 +1,15 @@
-class Generics<T> {
-  T name;
-  T subName;
-  Generics(this.name, this.subName);
+class RequiredClass {
+  double radious;
+  // required here is mandatory for radious
+  RequiredClass({required this.radious});
+
+  /*
+    return : {double} this.radious
+  */
+  double get area => 3.14 * this.radious;
 }
 
 void main() {
-  var GenericsObj = Generics<String>("Bibhuti", "Swain");
-  print("${GenericsObj.name} ${GenericsObj.subName}");
+  var objOfRequired = RequiredClass(radious: 20);
+  print(objOfRequired.area);
 }
