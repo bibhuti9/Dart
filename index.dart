@@ -1,18 +1,9 @@
-abstract class Modal {}
-
-mixin user {
-  String name = "";
-  void getUserName({String name = ""}) {
-    this.name = name == "" ? "Default name" : name;
-    print("User name is ${this.name}");
-  }
+extension _shirnk on String {
+  String shrink(int length) => "${this.substring(0, length)}... Read More";
 }
 
-class review with user {}
-
-class post with user {}
-
 void main() {
-  var reviewObj = review();
-  reviewObj.getUserName();
+  String sentense =
+      "This is the greate string by the way you should checkput this today only hurry up now..";
+  print(sentense.shrink(14));
 }
