@@ -1,7 +1,10 @@
-import "extension.dart";
+class Generics<T> {
+  T name;
+  T subName;
+  Generics(this.name, this.subName);
+}
 
 void main() {
-  String sentense =
-      "This is the greate string by the way you should checkput this today only hurry up now..";
-  print(sentense.shrink(34));
+  var GenericsObj = Generics<String>("Bibhuti", "Swain");
+  print("${GenericsObj.name} ${GenericsObj.subName}");
 }
