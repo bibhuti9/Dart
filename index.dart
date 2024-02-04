@@ -42,5 +42,19 @@ class students {
 void main() {
   var obj = new students();
   studentss.map((e) => obj.setStudent(e)).toList();
-  print(obj.getStudents());
+  List<Map<String, dynamic>> list = obj.getStudents();
+  for (var lists in list) {
+    print(lists);
+  }
 }
+
+
+/**
+ * Var
+ * Const
+ * List
+ * Map
+ * Set
+ * Dynamic
+ * Final
+*/
