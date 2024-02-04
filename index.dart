@@ -1,10 +1,46 @@
-void main() {
-  List<int> lists = [];
-  lists.add(2);
-  lists.add(3);
-  lists.add(4);
-  lists.add(5);
-  for (int list in lists) {
-    print("${list} is ${list % 2 == 0 ? "Even" : "Odd"}");
+var studentss = [
+  {
+    "id": 1,
+    "profile": {"name": "bibhuti"},
+    "comments": 20,
+    "posts": {
+      "post": [
+        {"name": "Today"},
+        {"name": "Next day"},
+        {"name": "Previous"},
+      ],
+      "length": 3
+    }
+  },
+  {
+    "id": 2,
+    "profile": {"name": "bibhuti"},
+    "comments": 20,
+    "posts": {
+      "post": [
+        {"name": "Today"},
+        {"name": "Next day"},
+        {"name": "Previous"},
+      ],
+      "length": 3
+    }
+  },
+];
+
+class students {
+  List<Map<String, dynamic>> student = [];
+
+  setStudent(Map<String, dynamic> student) {
+    this.student.add(student);
   }
+
+  getStudents() {
+    return this.student;
+  }
+}
+
+void main() {
+  var obj = new students();
+  studentss.map((e) => obj.setStudent(e)).toList();
+  print(obj.getStudents());
 }
