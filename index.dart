@@ -25,7 +25,34 @@ var studentss = [
       "length": 3
     }
   },
+  {
+    "id": 3,
+    "profile": {"name": "bibhuti"},
+    "comments": 20,
+    "posts": {
+      "post": [
+        {"name": "Today"},
+        {"name": "Next day"},
+        {"name": "Previous"},
+      ],
+      "length": 3
+    }
+  },
 ];
+
+Map<String, dynamic> addVal = {
+  "id": 4,
+  "profile": {"name": "bibhuti"},
+  "comments": 20,
+  "posts": {
+    "post": [
+      {"name": "Today"},
+      {"name": "Next day"},
+      {"name": "Previous"},
+    ],
+    "length": 3
+  }
+};
 
 class students {
   List<Map<String, dynamic>> student = [];
@@ -43,9 +70,18 @@ void main() {
   var obj = new students();
   studentss.map((e) => obj.setStudent(e)).toList();
   List<Map<String, dynamic>> list = obj.getStudents();
-  for (var lists in list) {
-    print(lists);
-  }
+
+  final numbers = <int>[
+    1,
+    2,
+    4,
+    5,
+  ];
+
+  List<String> number2 = numbers
+      .map((element) => "${element} ${element % 2 == 0 ? "Event" : "Odd"}")
+      .toList();
+  print(number2);
 }
 
 
