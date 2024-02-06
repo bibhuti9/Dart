@@ -81,6 +81,8 @@ void main() {
   List<String> number2 = numbers
       .map((element) => "${element} ${element % 2 == 0 ? "Event" : "Odd"}")
       .toList();
+
+  int count = numbers.reduce((first, second) => first + second);
   print(number2);
 }
 
