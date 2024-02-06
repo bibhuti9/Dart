@@ -66,7 +66,7 @@ class students {
   }
 }
 
-void main() {
+Future<void> main() async {
   var obj = new students();
   studentss.map((e) => obj.setStudent(e)).toList();
   List<Map<String, dynamic>> list = obj.getStudents();
@@ -84,6 +84,10 @@ void main() {
 
   int count = numbers.reduce((first, second) => first + second);
   print(number2);
+
+  var future = Future.delayed(Duration(seconds: 1), () => 2);
+  future.then((value) => print(value));
+  future.whenComplete(() => print("Afer"));
 }
 
 
